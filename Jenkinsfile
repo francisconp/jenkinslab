@@ -1,5 +1,6 @@
 
 pipeline {
+    agent any
     stage('Deploy') {
       input {
         message "Should we continue?"
