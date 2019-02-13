@@ -6,9 +6,7 @@ pipeline {
           input {
             message "Which Version?"
             ok "Deploy"
-            parameters {
-                choice(name: 'APP_VERSION', choices: "v1.1\nv1.2\nv1.3", description: 'What to deploy?')
-            }
+            parameters { booleanParam(name: 'APP_VERSION', defaultValue: true, description: 'teste') }
           }
           steps {
             echo "Deploying ${APP_VERSION}."
