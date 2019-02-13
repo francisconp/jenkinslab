@@ -3,9 +3,6 @@ pipeline {
     agent any
     stages {
         stage('Deploy') {
-          options {
-            timeout(time: 30, unit: 'SECONDS') 
-          }
           input {
             message "Which Version?"
             ok "Deploy"
