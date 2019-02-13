@@ -1,3 +1,4 @@
+pipeline {
     stage('Deploy') {
       options {
         timeout(time: 30, unit: 'SECONDS') 
@@ -13,3 +14,4 @@
         echo "Deploying ${APP_VERSION}."
       }
     }
+}
