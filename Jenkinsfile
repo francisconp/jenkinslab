@@ -2,10 +2,13 @@
 pipeline {
     agent any
     stages {
-        stage(‘Build’) {
-            steps {
-                sh 'npm --version'
-            }
+        stage('Deploy') {
+          input {
+            message "Should we continue?"
+          }
+          steps {
+            echo "Continuing with deployment"
+          }
         }
     }
 }
